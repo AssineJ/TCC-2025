@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="80" viewBox="0 0 160 80" role="img" aria-labelledby="title desc">
+  <title id="title">CNN Brasil</title>
+  <desc id="desc">Logotipo simplificado da CNN Brasil com fundo vermelho e texto branco.</desc>
+  <rect width="160" height="80" rx="12" fill="#cc0000" />
+  <text x="80" y="52" text-anchor="middle" font-family="'Arial Black', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="42" fill="#ffffff" letter-spacing="4">CNN</text>
+  <text x="80" y="70" text-anchor="middle" font-family="'Arial', sans-serif" font-size="14" fill="#ffffff" opacity="0.85">Brasil</text>
+</svg>
