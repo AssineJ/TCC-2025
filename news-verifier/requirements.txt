@@ -21,3 +21,4 @@ tokenizers==0.19.1
 accelerate==0.30.1
 sentencepiece==0.2.0
 https://github.com/explosion/spacy-models/releases/download/pt_core_news_lg-3.7.0/pt_core_news_lg-3.7.0.tar.gz
+gunicorn==21.2.0
