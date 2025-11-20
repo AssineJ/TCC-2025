@@ -20,5 +20,5 @@ huggingface_hub==0.23.5
 tokenizers==0.19.1
 accelerate==0.30.1
 sentencepiece==0.2.0
-https://github.com/explosion/spacy-models/releases/download/pt_core_news_lg-3.7.0/pt_core_news_lg-3.7.0.tar.gz
+pt-core-news-lg @ https://github.com/explosion/spacy-models/releases/download/pt_core_news_lg-3.7.0/pt_core_news_lg-3.7.0-py3-none-any.whl
 gunicorn==21.2.0
