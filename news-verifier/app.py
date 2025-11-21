@@ -70,13 +70,10 @@ def log_info(message: str = ""):
 app.config.from_object(Config)
 
 
-@app.route('/api/verificar', methods=['POST'])
+@app.route('/api/verificar', methods=['POST', 'OPTIONS'])
 def verificar_noticia():
-    """
-    Endpoint principal que recebe uma notícia e retorna análise de veracidade.
-     COM VALIDAÇÃO DE QUALIDADE DE TEXTO
-    """
-
+    if request.method == 'OPTIONS':
+        return '', 204
     try:
                                 
         dados = request.get_json()
