@@ -16,7 +16,7 @@ function buildPayload(type, payload) {
 
 export async function verifyNewsRequest(type, payload) {
   const controller = new AbortController();
-  // 240s (4min) – pode ajustar se quiser mais curto
+  // 240s (4min) – pode ajustar se quiser
   const timeoutId = setTimeout(() => controller.abort(), 240000);
 
   try {
@@ -31,23 +31,20 @@ export async function verifyNewsRequest(type, payload) {
     const response = await fetch(`${baseURL}/api/verificar`, {
       method: 'POST',
       headers: {
-        ...DEFAULT_HEADERS,
-        // evita a tela de aviso do ngrok
-        'ngrok-skip-browser-warning': 'true'
+        ...DEFAULT_HEADERS
+        // <<< removido o 'ngrok-skip-browser-warning'
       },
       body: JSON.stringify(requestBody),
       signal: controller.signal,
       mode: 'cors'
     });
 
-    // HTTP != 2xx
     if (!response.ok) {
       let errorData = {};
       try {
         errorData = await response.json();
-      } catch (_) {
-        // corpo vazio ou inválido, ignora
-      }
+      } catch (_) {}
+
       console.error('[API] Erro HTTP da API:', response.status, errorData);
       throw new Error(
         errorData.erro ||
