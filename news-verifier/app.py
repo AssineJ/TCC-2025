@@ -22,7 +22,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 app = Flask(__name__)
 
                 
-CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
                          
 log_level = getattr(logging, Config.LOG_LEVEL.upper(), logging.DEBUG)
