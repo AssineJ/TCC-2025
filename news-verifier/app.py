@@ -32,7 +32,12 @@ def after_request(response):
 def home():
     return jsonify({"status": "online"}), 200
 
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, 
+     resources={r"/api/*": {
+         "origins": "*",
+         "methods": ["GET", "POST", "OPTIONS"],
+         "allow_headers": ["Content-Type"]
+     }})
 
                          
 log_level = getattr(logging, Config.LOG_LEVEL.upper(), logging.DEBUG)
